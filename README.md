@@ -25,12 +25,9 @@ Install on local machine
     - login for admin and analyst roles (u:erics / p:jbossbrms1!)
     ```
 
-TODO: fix below when repo available.
-
-
 6. Build and deploy version 1.0 of project.
 
-8. View Authoring -> Artifact repository to see deployed loandemo-1.0.jar artifact.
+8. View Authoring -> Artifact repository to see deployed weightwatchers-1.0.jar artifact.
 
 9. Open rule deployments perspective via menu Deploy -> Rules Deployments
 
@@ -46,15 +43,15 @@ TODO: fix below when repo available.
 
 11. Provision starts by creating a Container, click on DevServer '+' on right.
 
-  - Name: container-loan1.0
+  - Name: container-weightwatchers1.0
 
-  - search button gathers all artifacts available, SELECT loandemo-1.0 to auto-fill rest of fields
+  - search button gathers all artifacts available, SELECT weightwatchers-1.0 to auto-fill rest of fields
 
   - click on OK
 
 12. Container is created, click on icon far right to view details.
 
-13. Select container-loan1.0 and click START to get it up and running, was orange color next to name, should turn green.
+13. Select container-weightwatchers1.0 and click START to get it up and running, was orange color next to name, should turn green.
 
 14. See 'Resolved Release Id' section for the container and version that is running and ready for rule queries.
 
@@ -66,11 +63,11 @@ TODO: fix below when repo available.
 
    - URL: http://localhost:8080/kie-server/services/rest/server/containers
 
-   - it will show container = contianer-loan1.0, meaning our container is available via the provided RestAPI 
+   - it will show container = contianer-weightwatchers1.0, meaning our container is available via the provided RestAPI 
 
 16. You can view some more information provided by the RestAPI using GET methods:
 
-   - http://localhost:8080/kie-server/services/rest/server/containers/container-loan1.0
+   - http://localhost:8080/kie-server/services/rest/server/containers/container-weightwatchers1.0
 
 17. Now to use POST or PUT methods we need to add a header to RESTClient for our requests:
 
@@ -82,17 +79,17 @@ TODO: fix below when repo available.
 
 18. Query the Realtime Decision Server with loan rules by using POST method:
 
-   - http://localhost:8080/kie-server/services/rest/server/containers/container-loan1.0
+   - http://localhost:8080/kie-server/services/rest/server/containers/container-weightwatchers1.0
 
-   - body of message can be found in support/loan-query.xml file, copy into Body section of RESTClient.
+   - body of message can be found in support/weightwatchers-query.xml file, copy into Body section of RESTClient.
 
    - note you can adjust the credit score field in the xml message body to show rows in decision table being used.
 
 19. You can change the decision table as desired, redeploy a new version, use the Server Management Browser to manage the container
 		using UPGRADE button to pull the latest version.
 
-   - you need to deploy a new version of the rules, for example version 1.1, then enter 1.1 in version field of container-loan1.0
-     before hitting UPGRADE button.
+   - you need to deploy a new version of the rules, for example version 1.1, then enter 1.1 in version field of
+     container-weightwatchers1.0 before hitting UPGRADE button.
 
 20. For creation or deletion of containers in the RestAPI, you need to use PUT methods, see product documentation User Guide for
 		details.
@@ -106,7 +103,7 @@ videos). After installing RESTClient in Firefox, restart and open it under TOOLS
 
 Supporting Articles
 -------------------
-[Really Simple Rules Service](http://blog.emergitect.com/2014/12/08/really-simple-rules-service)
+[Original Authors blog: Really Simple Rules Service](http://blog.emergitect.com/2014/12/08/really-simple-rules-service)
 
 
 Released versions
