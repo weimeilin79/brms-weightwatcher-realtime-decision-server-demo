@@ -1,0 +1,4 @@
+# pack-refs with: peeled
+eb745f773511cf0cbdf81e29755e246104b17dc9 refs/heads/master
+56fe1485c764093f9bef81b464717bd97f60968c refs/heads/social
+c533f77a2db1b7601f6c8510da64f8d5c4d42a88 refs/heads/spicozzi-uf-user
