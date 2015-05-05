@@ -112,5 +112,35 @@ See the tagged releases for the following versions of the product:
 
 - v1.0 JBoss BRMS 6.1 with demo rule project to deploy as Realtime Decision Server
 
+![Loan Project](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/weightwatchers-prj-overview.png)
 
+![Artifact Repo](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/artifact-repo-weightwatchers.png)
+
+![Deployment View](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/clean-rules-deployment-view.png)
+
+![Kie Server Endpoint](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/kie-server-endpoint.png)
+
+![Register Server](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/register-dev-server.png)
+
+![Dev Server](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/dev-server.png)
+
+![Create Container](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/create-container.png)
+
+![Container Details](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/container-details.png)
+
+![Start Container](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/start-container.png)
+
+![Started Container](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/started-container.png)
+
+![Restapi Auth](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/restapi-basic-authentication.png)
+
+![Restapi Containers](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/restapi-containers.png)
+
+![Restapi Loan Container](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/restapi-container-weightwatcher1.0.png)
+
+![Restapi Request Header](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/restapi-request-header.png)
+
+![Restapi Loan Request](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/restapi-weightwatchers-request.png)
+
+![Restapi Loan Request Response](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatchers-realtime-decision-server-demo/master/docs/demo-images/restapi-weightwatchers-request-response.png)
 
