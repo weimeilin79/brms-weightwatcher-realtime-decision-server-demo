@@ -25,6 +25,7 @@ Install on local machine
     - login for admin and analyst roles (u:erics / p:jbossbrms1!)
     ```
 
+TODO: fix below when repo available.
 
 
 6. Build and deploy version 1.0 of project.
@@ -96,8 +97,23 @@ Install on local machine
 20. For creation or deletion of containers in the RestAPI, you need to use PUT methods, see product documentation User Guide for
 		details.
 
-Supporting Articles
 
-http://blog.emergitect.com/2014/12/08/really-simple-rules-service/
+Notes
+-----
+You will need some sort of Rest client, such as the RESTClient Firefox extension which is used in this demo (screenshots and
+videos). After installing RESTClient in Firefox, restart and open it under TOOLS menu.
+
+
+Supporting Articles
+-------------------
+[Really Simple Rules Service](http://blog.emergitect.com/2014/12/08/really-simple-rules-service)
+
+
+Released versions
+-----------------
+See the tagged releases for the following versions of the product:
+
+- v1.0 JBoss BRMS 6.1 with demo rule project to deploy as Realtime Decision Server
+
 
 
