@@ -1,4 +1,4 @@
-<batch-execution>
+<batch-execution lookup="watchsession">
 	<insert-elements return-object="false">
 	
 		<com.redhat.weightwatcher.Fact>
