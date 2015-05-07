@@ -25,13 +25,11 @@ Install on local machine
     - login for admin and analyst roles (u:erics / p:jbossbrms1!)
     ```
 
-6. Build and deploy version 1.0 of project.
+6. Build and deploy version 1.0 of project, verify at 'Authoring -> Artifact repository' to see deployed weightwatchers-1.0.jar artifact.
 
-8. View Authoring -> Artifact repository to see deployed weightwatchers-1.0.jar artifact.
+7. Open rule deployments perspective via menu Deploy -> Rules Deployments
 
-9. Open rule deployments perspective via menu Deploy -> Rules Deployments
-
-10. Register a new server by filling in pop-up:
+8. Register a new server by filling in pop-up:
 
   - Endpoint: http://localhost:8080/kie-server/services/rest/server/
   
@@ -41,7 +39,7 @@ Install on local machine
 
   - Password: jbossbrms1!
 
-11. Provision starts by creating a Container, click on DevServer '+' on right.
+9. Provision starts by creating a Container, click on DevServer '+' on right.
 
   - Name: container-weightwatchers1.0
 
@@ -49,13 +47,13 @@ Install on local machine
 
   - click on OK
 
-12. Container is created, click on icon far right to view details.
+10. Container is created, click on icon far right to view details.
 
-13. Select container-weightwatchers1.0 and click START to get it up and running, was orange color next to name, should turn green.
+11. Select container-weightwatchers1.0 and click START to get it up and running, was orange color next to name, should turn green.
 
-14. See 'Resolved Release Id' section for the container and version that is running and ready for rule queries.
+12. See 'Resolved Release Id' section for the container and version that is running and ready for rule queries.
 
-15. Using Firefox + RESTClient you can see which server containers are available by:
+13. Using Firefox + RESTClient you can see which server containers are available by:
 
    - Add auth credentials in menu Authentication - Basic Authentication:  Username: erics    Password: jbossbrms1!
 
@@ -65,11 +63,11 @@ Install on local machine
 
    - it will show container = contianer-weightwatchers1.0, meaning our container is available via the provided RestAPI 
 
-16. You can view some more information provided by the RestAPI using GET methods:
+14. You can view some more information provided by the RestAPI using GET methods:
 
    - http://localhost:8080/kie-server/services/rest/server/containers/container-weightwatchers1.0
 
-17. Now to use POST or PUT methods we need to add a header to RESTClient for our requests:
+15. Now to use POST or PUT methods we need to add a header to RESTClient for our requests:
 
    - in menu Headers -> Custom Header
 
@@ -77,7 +75,7 @@ Install on local machine
 
    - Value: application/xml
 
-18. Query the Realtime Decision Server with loan rules by using POST method:
+16. Query the Realtime Decision Server with loan rules by using POST method:
 
    - http://localhost:8080/kie-server/services/rest/server/containers/container-weightwatchers1.0
 
@@ -85,13 +83,13 @@ Install on local machine
 
    - note you can adjust the credit score field in the xml message body to show rows in decision table being used.
 
-19. You can change the decision table as desired, redeploy a new version, use the Server Management Browser to manage the container
+17. You can change the decision table as desired, redeploy a new version, use the Server Management Browser to manage the container
 		using UPGRADE button to pull the latest version.
 
    - you need to deploy a new version of the rules, for example version 1.1, then enter 1.1 in version field of
      container-weightwatchers1.0 before hitting UPGRADE button.
 
-20. For creation or deletion of containers in the RestAPI, you need to use PUT methods, see product documentation User Guide for
+18. For creation or deletion of containers in the RestAPI, you need to use PUT methods, see product documentation User Guide for
 		details.
 
 
