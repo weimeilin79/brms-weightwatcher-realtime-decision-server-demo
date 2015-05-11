@@ -93,9 +93,9 @@ Option 1 - Install on local machine
 		details.
 
 
-Option 2 - Generate RH Container install
+Option 2 - Generate containerized install
 -----------------------------------------
-The following steps can be used to configure and run the demo in an RH Container
+The following steps can be used to configure and run the demo in a container
 
 1. [Download and unzip.](https://github.com/jbossdemocentral/brms-weightwatcher-realtime-decision-server-demo/archive/master.zip)
 
@@ -115,7 +115,7 @@ The following steps can be used to configure and run the demo in an RH Container
 	```
 6. Follow instructions from above starting at step 5 replacing *localhost* with *&lt;RH_CONTAINER_HOST&gt;* when applicable
 
-Additional information can be found in the jbossdemocentral RH container [developer repository](https://github.com/jbossdemocentral/docker-developer)
+Additional information can be found in the jbossdemocentral container [developer repository](https://github.com/jbossdemocentral/docker-developer)
 
 
 Notes
