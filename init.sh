@@ -109,7 +109,7 @@ cp $SUPPORT_DIR/userinfo.properties $SERVER_DIR/business-central.war/WEB-INF/cla
 
 echo "  - putting json jar into Kie Server classpath for Realtime Decision Servers..."
 echo
-cp $SUPPORT_DIR/json-20090211.jar $SERVER_DIR/kie-server.war/WEB-INF/lib/
+cp $SUPPORT_DIR/lib/json-20090211.jar $SERVER_DIR/kie-server.war/WEB-INF/lib/
 
 echo "  - making sure standalone.sh for server is executable..."
 echo
