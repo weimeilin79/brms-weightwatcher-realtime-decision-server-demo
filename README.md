@@ -81,15 +81,7 @@ Option 1 - Install on local machine
 
    - body of message can be found in support/weightwatchers-query.xml file, copy into Body section of RESTClient.
 
-   - note you can adjust the credit score field in the xml message body to show rows in decision table being used.
-
-17. You can change the decision table as desired, redeploy a new version, use the Server Management Browser to manage the container
-		using UPGRADE button to pull the latest version.
-
-   - you need to deploy a new version of the rules, for example version 1.1, then enter 1.1 in version field of
-     container-weightwatchers1.0 before hitting UPGRADE button.
-
-18. For creation or deletion of containers in the RestAPI, you need to use PUT methods, see product documentation User Guide for
+17. For creation or deletion of containers in the RestAPI, you need to use PUT methods, see product documentation User Guide for
 		details.
 
 
