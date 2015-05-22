@@ -11,7 +11,7 @@ are returned to the calling client as facts.
 
 Option 1 - Install on local machine
 ------------------------
-1. [Download and unzip.](https://github.com/jbossdemocentral/brms-weightwatcher-realtime-decicion-server-demo/archive/master.zip)
+1. [Download and unzip.](https://github.com/jbossdemocentral/brms-weightwatcher-realtime-decision-server-demo/archive/master.zip)
 
 2. Add products to installs directory.
 
