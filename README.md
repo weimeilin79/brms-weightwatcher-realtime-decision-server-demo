@@ -118,9 +118,11 @@ videos). After installing RESTClient in Firefox, restart and open it under TOOLS
 
 Supporting Articles
 -------------------
-[JBoss BPM Suite Quick Guide - Weight Watching with a Realtime Decision Server](http://www.schabell.org/2015/05/jboss-bpmsuite-quick-guide-weightwatching-realtime-decision-server.html)
+- [7 Steps to Your First Rules with JBoss BRMS Starter Kit](http://www.schabell.org/2015/08/7-steps-first-rules-jboss-brms-starter-kit.html)
 
-[Original Authors blog: Really Simple Rules Service](http://blog.emergitect.com/2014/12/08/really-simple-rules-service)
+- [JBoss BPM Suite Quick Guide - Weight Watching with a Realtime Decision Server](http://www.schabell.org/2015/05/jboss-bpmsuite-quick-guide-weightwatching-realtime-decision-server.html)
+
+- [Original Authors blog: Really Simple Rules Service](http://blog.emergitect.com/2014/12/08/really-simple-rules-service)
 
 
 Released versions
