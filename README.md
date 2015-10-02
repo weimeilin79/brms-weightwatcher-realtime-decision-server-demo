@@ -129,6 +129,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v1.1 JBoss BRMS 6.2.0, JBoss EAP 6.4.3 and demo rule project to deploy as Realtime Decision Server
+
 - v1.0 JBoss BRMS 6.1 with demo rule project to deploy as Realtime Decision Server
 
 ![Loan Project](https://raw.githubusercontent.com/jbossdemocentral/brms-weightwatcher-realtime-decision-server-demo/master/docs/demo-images/weightwatchers-prj-overview.png)
