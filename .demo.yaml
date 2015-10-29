@@ -1,5 +1,5 @@
 id: jbossdemocentral-brms-weightwatcher-realtime-decision-server
-title: JBoss BRMS demonstration application of a stateless Realtime Decision Server based and includes support for complex event processing (CEP) use cases based on a pseudo clock.
+title: JBoss BRMS Weightwatcher Realtime Decision Server Demo
 github_repo_url: https://github.com/jbossdemocentral/brms-weightwatcher-realtime-decision-server-demo
 technologies:
   - JBoss EAP
