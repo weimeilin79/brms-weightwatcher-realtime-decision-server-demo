@@ -1,0 +1,10 @@
+id: jbossdemocentral-brms-weightwatcher-realtime-decision-server
+title: JBoss BRMS Weightwatcher Realtime Decision Server Demo
+github_repo_url: https://github.com/jbossdemocentral/brms-weightwatcher-realtime-decision-server-demo
+technologies:
+  - JBoss EAP
+  - JBoss BRMS
+summary: This demo project is a demonstration application of a stateless Realtime Decision Server based on JBoss BRMS and includes support for complex event processing (CEP) use cases based on a pseudo clock. Examples provided include a (REST) client sending a time series of facts in the form of weight observations to the deployed Realtime Decision Server. The Realtime Decision Server then reasons over the inputs to derive CEP insights such as average weight, least weight and weight change of a rolling time window. These insights  are returned to the calling client as facts.
+level: Beginner
+product: brms
+author: Stefano Picozzi, Eric D. Schabell
