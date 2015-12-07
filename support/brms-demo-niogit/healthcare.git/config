@@ -5,3 +5,9 @@
 	bare = true
 	logallrefupdates = false
 	precomposeunicode = true
+[remote "origin"]
+	url = file:///Users/erics/demo-projects/brms/brms-weightwatcher-realtime-decision-server-demo/test/brms-weightwatcher-realtime-decision-server-demo/target/jboss-eap-6.4/bin/.niogit/healthcare.git
+	fetch = +refs/heads/*:refs/heads/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
