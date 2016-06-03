@@ -3,7 +3,7 @@ setlocal
 
 set PROJECT_HOME=%~dp0
 set DEMO=Weightwatcher Realtime Decision Server Demo
-set AUTHORS=Stefano Picozzi, Eric D. Schabell
+set AUTHORS=Stefano Picozzi, Eric D. Schabell, Duncan Doyle
 set PROJECT1=git@github.com:
 set PROJECT2=jbossdemocentral/brms-realtime-decision-server-demo.git
 set PRODUCT=JBoss BRMS
@@ -14,10 +14,10 @@ set SERVER_BIN=%JBOSS_HOME%\bin
 set SUPPORT_DIR=%PROJECT_HOME%support
 set SRC_DIR=%PROJECT_HOME%installs
 set PRJ_DIR=%PROJECT_HOME%projects
-set BRMS=jboss-brms-6.2.0.GA-installer.jar
+set BRMS=jboss-brms-6.3.0.GA-installer.jar
 set EAP=jboss-eap-6.4.0-installer.jar
-set EAP_PATCH=jboss-eap-6.4.4-patch.zip
-set VERSION=6.2
+set EAP_PATCH=jboss-eap-6.4.7-patch.zip
+set VERSION=6.3
 
 REM wipe screen.
 cls

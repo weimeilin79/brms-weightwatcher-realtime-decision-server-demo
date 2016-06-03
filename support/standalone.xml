@@ -33,7 +33,6 @@
       <property name="org.kie.server.repo" value="${jboss.server.data.dir}"/>
       <property name="org.uberfire.metadata.index.dir" value="${jboss.home.dir}/bin"/>
       <property name="org.guvnor.m2repo.dir" value="${jboss.home.dir}/bin"/>
-      <property name="org.guvnor.m2repo.dir" value="${jboss.home.dir}/bin"/>
       <property name="org.kie.server.user" value="kieserver"></property>
       <property name="org.kie.server.pwd" value="kieserver1!"></property>
       <property name="org.kie.server.location" value="http://localhost:8080/kie-server/services/rest/server"></property>
