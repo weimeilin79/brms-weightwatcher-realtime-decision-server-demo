@@ -1,6 +1,6 @@
 #!/bin/sh 
 DEMO="Weightwatcher Realtime Decision Server Demo"
-AUTHORS="Stefano Picozzi, Eric D. Schabell"
+AUTHORS="Stefano Picozzi, Eric D. Schabell, Duncan Doyle"
 PROJECT1="git@github.com:"
 PROJECT2="jbossdemocentral/brms-weightwatcher-realtime-decision-server-demo.git"
 PRODUCT="JBoss BRMS"
@@ -11,10 +11,10 @@ SERVER_BIN=$JBOSS_HOME/bin
 SUPPORT_DIR=./support
 SRC_DIR=./installs
 PRJ_DIR=./projects
-BRMS=jboss-brms-6.2.0.GA-installer.jar
+BRMS=jboss-brms-6.3.0.GA-installer.jar
 EAP=jboss-eap-6.4.0-installer.jar
-EAP_PATCH=jboss-eap-6.4.4-patch.zip
-VERSION=6.2
+EAP_PATCH=jboss-eap-6.4.7-patch.zip
+VERSION=6.3
 
 # wipe screen.
 clear 
@@ -92,7 +92,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo
-echo "Applying JBoss EAP 6.4.4 patch now..."
+echo "Applying JBoss EAP 6.4.7 patch now..."
 echo
 $JBOSS_HOME/bin/jboss-cli.sh --command="patch apply $SRC_DIR/$EAP_PATCH"
 
