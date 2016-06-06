@@ -29,31 +29,19 @@ Option 1 - Install on local machine
 
 7. Open rule deployments perspective via menu Deploy -> Rules Deployments
 
-8. Register a new server by filling in pop-up:
+8. Add a new Container to the 'local-server-123' template:
 
-  - Endpoint: http://localhost:8080/kie-server/services/rest/server/
-  
-  - Name: DevServer (...as we are testing this in our dev environment)
+  - Name: containerweightwatchers10
 
-  - Username: erics (...who must have role of kie-server)
+  - In the search field, enter *weight* and click the *Search* button to gathers all artifacts available, SELECT com.redhat.demos:weightwatchers:1.0 to auto-fill rest of fields
 
-  - Password: jbossbrms1!
+  - click on *Finish*
 
-9. Provision starts by creating a Container, click on DevServer '+' on right.
+9. The container is created. Click the *Start* button in the upper-right of the screen to start the container. The *local-server-123@localhost:8080* instance should now be displayed as on of the KIE-Servers running the template and container.
 
-  - Name: container-weightwatchers1.0
+10. Click on the *local-server-123@localhost:8080* button, this will show the *GroupId*, *ArtifactId* and *Version* of the artifact running in the container, as well as the URL of the REST API.
 
-  - search button gathers all artifacts available, SELECT weightwatchers-1.0 to auto-fill rest of fields
-
-  - click on OK
-
-10. Container is created, click on icon far right to view details.
-
-11. Select container-weightwatchers1.0 and click START to get it up and running, was orange color next to name, should turn green.
-
-12. See 'Resolved Release Id' section for the container and version that is running and ready for rule queries.
-
-13. Using Firefox + RESTClient you can see which server containers are available by:
+11. Using Firefox + RESTClient you can see which server containers are available by accessing the following RESTful resource:
 
    - Add auth credentials in menu Authentication - Basic Authentication:  Username: erics    Password: jbossbrms1!
 
@@ -61,33 +49,34 @@ Option 1 - Install on local machine
 
    - URL: http://localhost:8080/kie-server/services/rest/server/containers
 
-   - it will show container = contianer-weightwatchers1.0, meaning our container is available via the provided RestAPI 
+   - it will show container = containerweightwatchers10, meaning our container is available via the provided RestAPI 
 
-14. You can view some more information provided by the RestAPI using GET methods:
+12. You can view some more information provided by the RestAPI using GET methods:
 
-   - http://localhost:8080/kie-server/services/rest/server/containers/container-weightwatchers1.0
+   - http://localhost:8080/kie-server/services/rest/server/containers/containerweightwatchers10
 
-15. Now to use POST or PUT methods we need to add a header to RESTClient for our requests:
+13. Now to use POST or PUT methods we need to add two headers to RESTClient for our requests:
+
+   - http://localhost:8080/kie-server/services/rest/server/containers/instances/containerweightwatchers10
 
    - in menu Headers -> Custom Header
 
-   - Name: Content-Type
+   - Name: Content-Type; Value: application/xml
+  
+   - Name: X-KIE-ContentType; Value: xstream
 
-   - Value: application/xml
+14. Query the Realtime Decision Server with weightwatcher rules by using POST method:
 
-16. Query the Realtime Decision Server with loan rules by using POST method:
+   - http://localhost:8080/kie-server/services/rest/server/containers/instances/containerweightwatchers10
 
-   - http://localhost:8080/kie-server/services/rest/server/containers/container-weightwatchers1.0
+   - The body of the message can be found in the support/weightwatchers-query.xml file. Copy the content of this file into the Body section of RESTClient.
 
-   - body of message can be found in support/weightwatchers-query.xml file, copy into Body section of RESTClient.
-
-17. For creation or deletion of containers in the RestAPI, you need to use PUT methods, see product documentation User Guide for
-		details.
+15. To create or delete of containers via the RestAPI, you need to use the PUT an DELETE methods. See the product documentation's User Guide for details.
 
 
 Option 2 - Generate containerized install
 -----------------------------------------
-The following steps can be used to configure and run the demo in a container
+The following steps can be used to configure and run the demo in a container:
 
 1. [Download and unzip.](https://github.com/jbossdemocentral/brms-weightwatcher-realtime-decision-server-demo/archive/master.zip)
 
