@@ -1,6 +1,7 @@
 package com.redhat.weightwatcher;
 
-import org.json.JSONObject;
+import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.map.ObjectMapper;
 import com.redhat.weightwatcher.GAS;
 
 function void print(String txt) {
@@ -12,20 +13,20 @@ rule "ruleInsertGAS"
 when
     	fact : Fact( factname == "GAS" )
 then
-        JSONObject factjson = new JSONObject( fact.getFactjson( ).toString( ) );
-
-        Integer userid = new Integer( Integer.parseInt( factjson.get("userid").toString( ) ) );
-       	String goalname = new String( factjson.get("goalname").toString( )  );
-        Integer besthi = new Integer( Integer.parseInt( factjson.get( "besthi" ).toString( ) ) );
-        Integer bestlo = new Integer( Integer.parseInt( factjson.get( "bestlo" ).toString( ) ) );
-        Integer morehi = new Integer( Integer.parseInt( factjson.get( "morehi" ).toString( ) ) );
-        Integer morelo = new Integer( Integer.parseInt( factjson.get( "morelo" ).toString( ) ) );
-        Integer exphi = new Integer( Integer.parseInt( factjson.get( "exphi" ).toString( ) ) );
-        Integer explo = new Integer( Integer.parseInt( factjson.get( "explo" ).toString( ) ) );
-        Integer lesshi = new Integer( Integer.parseInt( factjson.get( "lesshi" ).toString( ) ) );
-        Integer lesslo = new Integer( Integer.parseInt( factjson.get( "lesslo" ).toString( ) ) );
-        Integer worsthi = new Integer( Integer.parseInt( factjson.get( "worsthi" ).toString( ) ) );
-        Integer worstlo = new Integer( Integer.parseInt( factjson.get( "worstlo" ).toString( ) ) );
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode node = mapper.readTree(fact.getFactjson( ).toString( ));
+        Integer userid = node.get("userid").getIntValue();
+        String goalname = node.get("goalname").getTextValue();
+        Integer besthi = node.get("besthi").getIntValue();
+        Integer bestlo = node.get("bestlo").getIntValue();
+        Integer morehi = node.get("morehi").getIntValue();
+        Integer morelo = node.get("morelo").getIntValue();
+        Integer exphi = node.get("exphi").getIntValue();
+        Integer explo = node.get("explo").getIntValue();
+        Integer lesshi = node.get("lesshi").getIntValue();
+        Integer lesslo = node.get("lesslo").getIntValue();
+        Integer worsthi = node.get("worsthi").getIntValue();
+        Integer worstlo = node.get("worstlo").getIntValue();
 
     	GAS gas = new GAS(  );
 	   gas.setUserid( userid );
@@ -50,4 +51,3 @@ end
 query "getGAS"
 	gas : GAS( )
 end
-

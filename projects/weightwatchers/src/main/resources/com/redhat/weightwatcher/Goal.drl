@@ -1,21 +1,24 @@
 package com.redhat.weightwatcher;
 
-import org.json.JSONObject;
+import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.map.ObjectMapper;
 import com.redhat.weightwatcher.Goal;
-
+com.redhat.weightwatcher.Fact( )
 rule "ruleInsertGoal"
 	salience 10000
 when
     	fact : Fact( factname == "Goal" )
 then
-        JSONObject factjson = new JSONObject( fact.getFactjson( ).toString( ) );
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode node = mapper.readTree(fact.getFactjson( ).toString( ));
 
-        Integer userid = new Integer( Integer.parseInt( factjson.get("userid").toString( ) ) );
-       	String goalname = new String( factjson.get("goalname").toString( )  );
-        Integer target = new Integer( Integer.parseInt( factjson.get("target").toString( ) ) );
-        Integer start = new Integer( Integer.parseInt( factjson.get("start").toString( ) ) );
-        Integer low = new Integer( Integer.parseInt( factjson.get("low").toString( ) ) );
-        Integer high = new Integer( Integer.parseInt( factjson.get("high").toString( ) ) );
+        Integer userid = node.get("userid").getIntValue();
+       	String goalname = node.get("goalname").getTextValue();
+        Integer target = node.get("target").getIntValue();
+        Integer start = node.get("start").getIntValue();
+        Integer low = node.get("low").getIntValue();
+        Integer high = node.get("high").getIntValue();
+
 
     	Goal goal = new Goal(  );
 	    goal.setUserid( userid );
@@ -33,4 +36,3 @@ end
 query "getGoal"
 	goal : Goal( )
 end
-
