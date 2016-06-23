@@ -144,10 +144,6 @@ echo - setup email task notification users...
 echo.
 xcopy /Y /Q "%SUPPORT_DIR%\userinfo.properties" "%SERVER_DIR%\business-central.war\WEB-INF\classes\"
 
-echo - putting json jar into Kie Server classpath for Realtime Decision Servers...
-echo.
-xcopy /Y /Q "%SUPPORT_DIR%\lib\json-20090211.jar" "%SERVER_DIR%\kie-server.war\WEB-INF\lib\"
-
 echo.
 echo You can now start the %PRODUCT% with %SERVER_BIN%\standalone.bat
 echo.
