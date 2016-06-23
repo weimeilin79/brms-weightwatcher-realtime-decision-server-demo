@@ -37,7 +37,6 @@ RUN sed -i "s:<installpath>.*</installpath>:<installpath>$BRMS_HOME</installpath
 COPY support/brms-demo-niogit $BRMS_HOME/bin/.niogit
 COPY support/userinfo.properties $BRMS_HOME/standalone/deployments/business-central.war/WEB-INF/classes/
 COPY support/application-roles.properties support/standalone.xml $BRMS_HOME/standalone/configuration/
-COPY support/lib/json-20090211.jar $BRMS_HOME/standalone/deployments/kie-server.war/WEB-INF/lib/
 
 # Swtich back to root user to perform build and cleanup
 USER root
